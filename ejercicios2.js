@@ -180,7 +180,7 @@ function esMultiplo(num1, num2) {
 	}
 
 	return false;
-}
+} // Correcion de comentario
 
 // Test 9:
 function obtenerEstacion(mes) {
