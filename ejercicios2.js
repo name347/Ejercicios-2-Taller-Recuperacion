@@ -109,6 +109,15 @@ function esAnioBisiesto(anio) {
 	// EXCEPTO si es divisible por 100 (a menos que también sea divisible por 400).
 	// Ejemplos: 2000 → true, 1900 → false, 2024 → true, 2023 → false
 	// Tu código:
+		if (anio % 4 === 0 && anio % 100 !== 0) {
+		return true;
+	}
+
+	if (anio % 400 === 0) {
+		return true;
+	}
+
+	return false;
 }
 
 // ██████  OPERADORES LÓGICOS Y MATEMÁTICOS ████████████████████████
