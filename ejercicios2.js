@@ -175,6 +175,11 @@ function esMultiplo(num1, num2) {
 	// Devuelve true si num1 es múltiplo de num2 o viceversa.
 	// Ejemplo: esMultiplo(10, 5) → true, esMultiplo(7, 3) → false
 	// Tu código:
+		if (num1 % num2 === 0 || num2 % num1 === 0) {
+		return true;
+	}
+
+	return false;
 }
 
 // Test 9:
