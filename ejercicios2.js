@@ -253,6 +253,17 @@ function contarVocales(texto) {
 	// No distingue entre mayúsculas y minúsculas.
 	// Ejemplo: contarVocales("Hola Mundo") → 4
 	// Tu código:
+		let contador = 0;
+	let letras = texto.toLowerCase();
+
+	for (let i = 0; i < letras.length; i++) {
+
+		if ("aeiou".includes(letras[i])) {
+			contador++;
+		}
+	}
+
+	return contador;
 }
 
 // Test 13:
