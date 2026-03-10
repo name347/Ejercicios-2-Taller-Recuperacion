@@ -132,6 +132,14 @@ function validarContraseña(password) {
 	// De lo contrario, devuelve false.
 	// Pista: Usa métodos de string como .length, .includes(), o expresiones regulares simples.
 	// Tu código:
+		if (password.length < 8) {
+		return false;
+	}
+
+	let tieneMayuscula = /[A-Z]/.test(password);
+	let tieneNumero = /[0-9]/.test(password);
+
+	return tieneMayuscula && tieneNumero;
 }
 
 // Test 7:
