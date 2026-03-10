@@ -9,6 +9,7 @@
 // ==========================================
 
 // ██████  COMPARACIÓN Y CONDICIONALES ████████████████████████
+// Taller de recuperacion Ivan Santiago Bejarano Sua
 
 // Test 1:
 function esMayorDeEdad(edad) {
