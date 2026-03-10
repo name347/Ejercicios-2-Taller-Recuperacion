@@ -51,6 +51,18 @@ function calcularDescuento(precio, esMiembro, esFinDeSemana) {
 	// - Si no cumple ninguna: sin descuento (0%)
 	// Devuelve el precio final después de aplicar el descuento.
 	// Tu código:
+	let descuento = 0;
+
+	if (esMiembro && esFinDeSemana) {
+		descuento = 0.30;
+	} 
+	else if (esMiembro || esFinDeSemana) {
+		descuento = 0.15;
+	}
+
+	let precioFinal = precio - (precio * descuento);
+
+	return precioFinal;
 }
 
 // Test 4:
