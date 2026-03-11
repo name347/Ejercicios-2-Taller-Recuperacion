@@ -9,8 +9,13 @@
 // ==========================================
 
 // ██████  COMPARACIÓN Y CONDICIONALES ████████████████████████
+<<<<<<< HEAD
 
 // Taller de recuperacion Ivan Santiago Bejarano Sua
+=======
+// Taller de recuperacion Ivan Santiago Bejarano Sua
+
+>>>>>>> 8a33a0b81d176451f2501adaf9bf2f2a020dda83
 // Test 1:
 function esMayorDeEdad(edad) {
 	// Recibe un número representando la edad de una persona.
@@ -28,6 +33,22 @@ function clasificarTriangulo(lado1, lado2, lado3) {
 	// - "Escaleno" si todos los lados son diferentes
 	// - "No es triángulo" si no cumple la propiedad triangular
 	// Tu código:
+<<<<<<< HEAD
+=======
+	if (lado1 + lado2 <= lado3 || lado1 + lado3 <= lado2 || lado2 + lado3 <= lado1) {
+		return "No es triángulo";
+	}
+
+	if (lado1 === lado2 && lado2 === lado3) {
+		return "Equilátero";
+	}
+
+	if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
+		return "Isósceles";
+	}
+
+	return "Escaleno";
+>>>>>>> 8a33a0b81d176451f2501adaf9bf2f2a020dda83
 }
 
 // Test 3:
@@ -39,6 +60,21 @@ function calcularDescuento(precio, esMiembro, esFinDeSemana) {
 	// - Si no cumple ninguna: sin descuento (0%)
 	// Devuelve el precio final después de aplicar el descuento.
 	// Tu código:
+<<<<<<< HEAD
+=======
+	let descuento = 0;
+
+	if (esMiembro && esFinDeSemana) {
+		descuento = 0.30;
+	} 
+	else if (esMiembro || esFinDeSemana) {
+		descuento = 0.15;
+	}
+
+	let precioFinal = precio - (precio * descuento);
+
+	return precioFinal;
+>>>>>>> 8a33a0b81d176451f2501adaf9bf2f2a020dda83
 }
 
 // Test 4:
@@ -48,6 +84,36 @@ function obtenerDiaSemana(numero) {
 	// 1 = "Lunes", 2 = "Martes", ..., 7 = "Domingo"
 	// Si el número no está en el rango, devuelve "Día inválido"
 	// Tu código:
+<<<<<<< HEAD
+=======
+		switch (numero) {
+
+		case 1:
+			return "Lunes";
+
+		case 2:
+			return "Martes";
+
+		case 3:
+			return "Miércoles";
+
+		case 4:
+			return "Jueves";
+
+		case 5:
+			return "Viernes";
+
+		case 6:
+			return "Sábado";
+
+		case 7:
+			return "Domingo";
+
+		default:
+			return "Día inválido";
+	}
+
+>>>>>>> 8a33a0b81d176451f2501adaf9bf2f2a020dda83
 }
 
 // Test 5:
@@ -58,6 +124,18 @@ function esAnioBisiesto(anio) {
 	// EXCEPTO si es divisible por 100 (a menos que también sea divisible por 400).
 	// Ejemplos: 2000 → true, 1900 → false, 2024 → true, 2023 → false
 	// Tu código:
+<<<<<<< HEAD
+=======
+		if (anio % 4 === 0 && anio % 100 !== 0) {
+		return true;
+	}
+
+	if (anio % 400 === 0) {
+		return true;
+	}
+
+	return false;
+>>>>>>> 8a33a0b81d176451f2501adaf9bf2f2a020dda83
 }
 
 // ██████  OPERADORES LÓGICOS Y MATEMÁTICOS ████████████████████████
@@ -72,6 +150,17 @@ function validarContraseña(password) {
 	// De lo contrario, devuelve false.
 	// Pista: Usa métodos de string como .length, .includes(), o expresiones regulares simples.
 	// Tu código:
+<<<<<<< HEAD
+=======
+		if (password.length < 8) {
+		return false;
+	}
+
+	let tieneMayuscula = /[A-Z]/.test(password);
+	let tieneNumero = /[0-9]/.test(password);
+
+	return tieneMayuscula && tieneNumero;
+>>>>>>> 8a33a0b81d176451f2501adaf9bf2f2a020dda83
 }
 
 // Test 7:
@@ -84,6 +173,24 @@ function calcularIMC(peso, altura) {
 	// - 25 <= IMC < 30 → "Sobrepeso"
 	// - IMC >= 30 → "Obesidad"
 	// Tu código:
+<<<<<<< HEAD
+=======
+	let imc = peso / (altura * altura);
+
+	if (imc < 18.5) {
+		return "Bajo peso";
+	}
+
+	if (imc < 25) {
+		return "Peso normal";
+	}
+
+	if (imc < 30) {
+		return "Sobrepeso";
+	}
+
+	return "Obesidad";
+>>>>>>> 8a33a0b81d176451f2501adaf9bf2f2a020dda83
 }
 
 // Test 8:
@@ -92,6 +199,14 @@ function esMultiplo(num1, num2) {
 	// Devuelve true si num1 es múltiplo de num2 o viceversa.
 	// Ejemplo: esMultiplo(10, 5) → true, esMultiplo(7, 3) → false
 	// Tu código:
+<<<<<<< HEAD
+=======
+		if (num1 % num2 === 0 || num2 % num1 === 0) {
+		return true;
+	}
+
+	return false;
+>>>>>>> 8a33a0b81d176451f2501adaf9bf2f2a020dda83
 }
 
 // Test 9:
@@ -104,6 +219,34 @@ function obtenerEstacion(mes) {
 	// - Septiembre, Octubre, Noviembre → "Otoño"
 	// Si el mes no es válido, devuelve "Mes inválido"
 	// Tu código:
+<<<<<<< HEAD
+=======
+	switch (mes) {
+
+	case 12:
+	case 1:
+	case 2:
+		return "Invierno";
+
+	case 3:
+	case 4:
+	case 5:
+		return "Primavera";
+
+	case 6:
+	case 7:
+	case 8:
+		return "Verano";
+
+	case 9:
+	case 10:
+	case 11:
+		return "Otoño";
+
+	default:
+		return "Mes inválido";
+	}
+>>>>>>> 8a33a0b81d176451f2501adaf9bf2f2a020dda83
 }
 
 // Test 10:
@@ -113,6 +256,12 @@ function calcularPropina(total, porcentaje) {
 	// Ejemplo: calcularPropina(100, 15) → 15.00
 	// Pista: Usa toFixed(2) y luego convierte a número si es necesario.
 	// Tu código:
+<<<<<<< HEAD
+=======
+		let propina = total * (porcentaje / 100);
+
+	return Number(propina.toFixed(2));
+>>>>>>> 8a33a0b81d176451f2501adaf9bf2f2a020dda83
 }
 
 // ██████  STRINGS Y VALIDACIONES ████████████████████████
@@ -124,6 +273,13 @@ function esPalabraPalindroma(palabra) {
 	// y de derecha a izquierda (ignora mayúsculas/minúsculas).
 	// Ejemplo: "reconocer" → true, "hola" → false, "Ana" → true
 	// Tu código:
+<<<<<<< HEAD
+=======
+		let texto = palabra.toLowerCase();
+	let invertido = texto.split("").reverse().join("");
+
+	return texto === invertido;
+>>>>>>> 8a33a0b81d176451f2501adaf9bf2f2a020dda83
 }
 
 // Test 12:
@@ -133,6 +289,20 @@ function contarVocales(texto) {
 	// No distingue entre mayúsculas y minúsculas.
 	// Ejemplo: contarVocales("Hola Mundo") → 4
 	// Tu código:
+<<<<<<< HEAD
+=======
+		let contador = 0;
+	let letras = texto.toLowerCase();
+
+	for (let i = 0; i < letras.length; i++) {
+
+		if ("aeiou".includes(letras[i])) {
+			contador++;
+		}
+	}
+
+	return contador;
+>>>>>>> 8a33a0b81d176451f2501adaf9bf2f2a020dda83
 }
 
 // Test 13:
@@ -144,6 +314,20 @@ function formatearNombre(nombre, apellido, mayusculas) {
 	// Ejemplo: formatearNombre("juan", "perez", true) → "JUAN PEREZ"
 	// Ejemplo: formatearNombre("juan", "perez", false) → "Juan Perez"
 	// Tu código:
+<<<<<<< HEAD
+=======
+			if (mayusculas) {
+		return (nombre + " " + apellido).toUpperCase();
+	}
+
+	let nombreFormateado =
+		nombre.charAt(0).toUpperCase() + nombre.slice(1).toLowerCase();
+
+	let apellidoFormateado =
+		apellido.charAt(0).toUpperCase() + apellido.slice(1).toLowerCase();
+
+	return nombreFormateado + " " + apellidoFormateado;
+>>>>>>> 8a33a0b81d176451f2501adaf9bf2f2a020dda83
 }
 
 // ██████  BUCLES BÁSICOS ████████████████████████
@@ -155,6 +339,16 @@ function sumarHasta(limite) {
 	// Ejemplo: sumarHasta(5) → 1+2+3+4+5 = 15
 	// Usa un bucle for o while.
 	// Tu código:
+<<<<<<< HEAD
+=======
+		let suma = 0;
+
+	for (let i = 1; i <= limite; i++) {
+		suma += i;
+	}
+
+	return suma;
+>>>>>>> 8a33a0b81d176451f2501adaf9bf2f2a020dda83
 }
 
 // Test 15:
@@ -164,6 +358,19 @@ function obtenerParesHasta(limite) {
 	// Ejemplo: obtenerParesHasta(10) → [0, 2, 4, 6, 8, 10]
 	// Usa un bucle for o while.
 	// Tu código:
+<<<<<<< HEAD
+=======
+		let pares = [];
+
+	for (let i = 0; i <= limite; i++) {
+
+		if (i % 2 === 0) {
+			pares.push(i);
+		}
+	}
+
+	return pares;
+>>>>>>> 8a33a0b81d176451f2501adaf9bf2f2a020dda83
 }
 
 // Test 16:
@@ -174,6 +381,20 @@ function factorial(n) {
 	// Nota: factorial(0) = 1 por definición.
 	// Usa un bucle for o while.
 	// Tu código:
+<<<<<<< HEAD
+=======
+		if (n === 0) {
+		return 1;
+	}
+
+	let resultado = 1;
+
+	for (let i = 1; i <= n; i++) {
+		resultado *= i;
+	}
+
+	return resultado;
+>>>>>>> 8a33a0b81d176451f2501adaf9bf2f2a020dda83
 }
 
 // Test 17:
@@ -182,6 +403,17 @@ function buscarNumero(array, objetivo) {
 	// Devuelve true si el objetivo está en el array, false en caso contrario.
 	// Usa un bucle for para recorrer el array (no uses .includes()).
 	// Tu código:
+<<<<<<< HEAD
+=======
+		for (let i = 0; i < array.length; i++) {
+
+		if (array[i] === objetivo) {
+			return true;
+		}
+	}
+
+	return false;
+>>>>>>> 8a33a0b81d176451f2501adaf9bf2f2a020dda83
 }
 
 // Test 18:
@@ -193,6 +425,20 @@ function obtenerPrimerosN(array, n) {
 	// NO uses .slice(), hazlo con un bucle.
 	// Ejemplo: obtenerPrimerosN([1,2,3,4,5], 3) → [1,2,3]
 	// Tu código:
+<<<<<<< HEAD
+=======
+		if (n <= 0) {
+		return [];
+	}
+
+	let resultado = [];
+
+	for (let i = 0; i < n && i < array.length; i++) {
+		resultado.push(array[i]);
+	}
+
+	return resultado;
+>>>>>>> 8a33a0b81d176451f2501adaf9bf2f2a020dda83
 }
 
 // ██████  NO MODIFICAR DESDE AQUÍ ███████████
